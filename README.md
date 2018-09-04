@@ -1,2 +1,2 @@
 # SWTGruppe12Repository
-SWT gruppe
+Welcome to SWTGruppe12!
