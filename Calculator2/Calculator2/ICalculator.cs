@@ -19,8 +19,6 @@ namespace Calculator2
         //Other functions
         double Divide(double dividend, double divisor);
 
-        double Accumulator();
-
         void Clear();
 
         double Add(double addend);
