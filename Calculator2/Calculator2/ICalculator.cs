@@ -15,5 +15,22 @@ namespace Calculator2
         double Multiply(double a, double b);
 
         double Power(double x, double exp);
+
+        //Other functions
+        double Divide(double dividend, double divisor);
+
+        double Accumulator();
+
+        void Clear();
+
+        double Add(double addend);
+
+        double Subtract(double subtractor);
+
+        double Multiply(double multiplier);
+
+        double Divide(double divisor);
+
+        double Power(double exponent);
     }
 }
