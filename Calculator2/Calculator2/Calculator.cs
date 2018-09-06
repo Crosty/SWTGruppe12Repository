@@ -12,22 +12,30 @@ namespace Calculator2
         public Calculator() { }
         public double Add(double a, double b)
         {
-            return a + b;
+            var result = a + b;
+            Accumulator = result;
+            return result;
         }
 
         public double Subtract(double a, double b)
         {
-            return a - b;
+            var result = a - b;
+            Accumulator = result;
+            return result;
         }
 
         public double Multiply(double a, double b)
         {
-            return a * b;
+            var result = a * b;
+            Accumulator = result;
+            return result;
         }
 
         public double Power(double x, double exp)
         {
-            return Math.Pow(x, exp);
+            var result = Math.Pow(x, exp);
+            Accumulator = result;
+            return result;
         }
 
         //Other functions
@@ -35,11 +43,14 @@ namespace Calculator2
         {
             try
             {
-                return dividend / divisor;
+                var result = dividend / divisor;
+                Accumulator = result;
+                return result;
             }
             catch (DivideByZeroException)
             {
                 Console.WriteLine($"An exception has occured! The attempt of dividing by zero");
+                Accumulator = 0;
                 return 0;
             }
         }
@@ -74,9 +85,19 @@ namespace Calculator2
 
         public double Divide(double divisor)
         {
-            var result = divisor / Accumulator;
-            Accumulator = result;
-            return result;
+            try
+            {
+                var result = Accumulator / divisor;
+                Accumulator = result;
+                return result;
+            }
+
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine($"An exception has occured! The attempt of dividing by zero");
+                Accumulator = 0;
+                return 0;
+            }
         }
 
         public double Power(double exponent)
