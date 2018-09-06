@@ -12,13 +12,13 @@ namespace Calculator.Test.Unit
     [Author("SWTGruppe12")]
     public class TestCalculator
     {
-        private ICalculator uut_;
+        private ICalculator _uut;
 
         [SetUp]
         public void Setup()
         {
             //Arrange
-            uut_ = new Calculator2.Calculator();
+            _uut = new Calculator2.Calculator();
         }
 
         [TestCase(3, 2, 5)]
@@ -29,7 +29,7 @@ namespace Calculator.Test.Unit
         [TestCase(5, 5, 10)]
         public void Add_AddPosAndNegNumbers_ResultIsCorrect(double a, double b, double result)
         {
-            Assert.That(uut_.Add(a, b), Is.EqualTo(result));
+            Assert.That(_uut.Add(a, b), Is.EqualTo(result));
         }
 
         [TestCase(3, 2, 1)]
@@ -39,7 +39,7 @@ namespace Calculator.Test.Unit
         [TestCase(3, 3, 0)]
         public void Subtract_SubtractPosAndNegNumbers_ResultIsCorrect(double a, double b, double result)
         {
-            Assert.That(uut_.Subtract(a, b), Is.EqualTo(result));
+            Assert.That(_uut.Subtract(a, b), Is.EqualTo(result));
         }
 
 
@@ -52,7 +52,7 @@ namespace Calculator.Test.Unit
         [TestCase(0, 0, 0)]
         public void Multiply_MultiplyNumbers_ResultIsCorrect(double a, double b, double result)
         {
-            Assert.That(uut_.Multiply(a, b), Is.EqualTo(result));
+            Assert.That(_uut.Multiply(a, b), Is.EqualTo(result));
         }
 
 
@@ -66,7 +66,11 @@ namespace Calculator.Test.Unit
         [TestCase(9, 0.5, 3.0)]
         public void Power_RaiseNumbers_ResultIsCorrect(double x, double exp, double result)
         {
-            Assert.That(uut_.Power(x, exp), Is.EqualTo(result));
+            Assert.That(_uut.Power(x, exp), Is.EqualTo(result));
         }
+
+        //TestCases on the other functions
+
+
     }
 }
