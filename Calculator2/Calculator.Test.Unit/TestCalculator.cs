@@ -71,6 +71,13 @@ namespace Calculator.Test.Unit
 
         //TestCases on the other functions
 
+        [TestCase(3, 4, 7, 14)]
+        public void Add_AddNumbersTogether_ResultIsCorrect(double a, double b, double addend, double result)
+        {
+            _uut.Add(a, b);
+            Assert.That(_uut.Add(addend), Is.EqualTo(result));
+        }
+
 
     }
 }

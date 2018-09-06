@@ -39,7 +39,7 @@ namespace Calculator2
             }
             catch (DivideByZeroException)
             {
-                Console.WriteLine($"The attempt of dividing by zero");
+                Console.WriteLine($"An exception has occured! The attempt of dividing by zero");
                 return 0;
             }
         }
@@ -53,27 +53,37 @@ namespace Calculator2
 
         public double Add(double addend)
         {
-            return addend + Accumulator;
+            var result = addend + Accumulator;
+            Accumulator = result;
+            return result;
         }
 
         public double Subtract(double subtractor)
         {
-            return subtractor - Accumulator;
+            var result = subtractor - Accumulator;
+            Accumulator = result;
+            return result;
         }
 
         public double Multiply(double multiplier)
         {
-            return multiplier * Accumulator;
+            var result = multiplier * Accumulator;
+            Accumulator = result;
+            return result;
         }
 
         public double Divide(double divisor)
         {
-            return divisor / Accumulator;
+            var result = divisor / Accumulator;
+            Accumulator = result;
+            return result;
         }
 
         public double Power(double exponent)
         {
-            return Math.Pow(Accumulator, exponent);
+            var result = Math.Pow(Accumulator, exponent);
+            Accumulator = result;
+            return result;
         }
     }
 }
