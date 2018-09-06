@@ -9,7 +9,7 @@ using Calculator2;
 namespace Calculator.Test.Unit
 {
     [TestFixture]
-    [Author("Stanie Cheung")]
+    [Author("SWTGruppe12")]
     public class TestCalculator
     {
         private ICalculator uut_;
