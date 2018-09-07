@@ -105,6 +105,7 @@ namespace Calculator.Test.Unit
         [TestCase(2, 2, 2, 16)]
         [TestCase(6, 6, 2, 2176782336)]
         [TestCase(1, 1, 1, 1)]
+        [TestCase(3, 2, 2, 81)]
         public void Power_PowerNumbersTogether_ResultIsCorrect(double x, double exp, double exponent, double result)
         {
             _uut.Power(x, exp);
