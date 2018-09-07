@@ -94,6 +94,7 @@ namespace Calculator.Test.Unit
         [TestCase(3, 3, 3, 27)]
         [TestCase(4, 4, 4, 64)]
         [TestCase(2, 3, -6, -36)]
+        [TestCase(4, 4, 10, 160)]
         public void Multiply_MultiplyNumbersTogether_ResultIsCorrect(double a, double b, double multiplier,
             double result)
         {
