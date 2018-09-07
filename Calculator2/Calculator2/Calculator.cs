@@ -50,7 +50,6 @@ namespace Calculator2
             catch (DivideByZeroException)
             {
                 Console.WriteLine($"An exception has occured! The attempt of dividing by zero");
-                Accumulator = 0;
                 return 0;
             }
         }
@@ -95,7 +94,6 @@ namespace Calculator2
             catch(DivideByZeroException)
             {
                 Console.WriteLine($"An exception has occured! The attempt of dividing by zero");
-                Accumulator = 0;
                 return 0;
             }
         }
