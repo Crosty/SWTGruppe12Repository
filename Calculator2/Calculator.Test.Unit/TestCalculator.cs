@@ -38,6 +38,7 @@ namespace Calculator.Test.Unit
         [TestCase(-3, 2, -5)]
         [TestCase(3, -2, 5)]
         [TestCase(3, 3, 0)]
+        [TestCase(8, 2, 6)]
         public void Subtract_SubtractPosAndNegNumbers_ResultIsCorrect(double a, double b, double result)
         {
             Assert.That(_uut.Subtract(a, b), Is.EqualTo(result));
