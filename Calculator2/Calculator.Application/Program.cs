@@ -32,6 +32,9 @@ namespace Calculator.Application
             Console.WriteLine("\n\nPower:");
             Console.Write($"{firstNumber} power to {secondNumber} = {test.Power(a, b)}");
 
+            Console.WriteLine("\n\nDivide:");
+            Console.Write($"{firstNumber} / {secondNumber} = {test.Divide(a, b)}");
+
             Console.WriteLine("\n\nPress enter to exit");
             Console.ReadLine();
         }
