@@ -10,15 +10,15 @@ namespace Calculator.Application
     {
         static void Main(string[] args)
         {
-            Calculator2.Calculator test = new Calculator2.Calculator();
+            var test = new Calculator2.Calculator();
 
             Console.WriteLine("Enter the first number: ");
-            string firstNumber = Console.ReadLine();
-            double a = double.Parse(firstNumber);
+            var firstNumber = Console.ReadLine();
+            var a = double.Parse(firstNumber ?? throw new InvalidOperationException("Error try again!"));
 
             Console.WriteLine("Enter the second number: ");
-            string secondNumber = Console.ReadLine();
-            double b = double.Parse(secondNumber);
+            var secondNumber = Console.ReadLine();
+            var b = double.Parse(secondNumber ?? throw new InvalidOperationException("Error try again!"));
 
             Console.WriteLine("Add:");
             Console.WriteLine($"{firstNumber} + {secondNumber} = {test.Add(a, b)}");
