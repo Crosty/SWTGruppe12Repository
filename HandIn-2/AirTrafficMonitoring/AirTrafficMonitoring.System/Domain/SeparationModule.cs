@@ -40,20 +40,24 @@ namespace AirTrafficMonitoring.System.Domain
 
         private bool CalculateSeparation(Point trackOne, Point trackTwo)
         {
-            double xcoord;
-            double ycoord;
-
             //Vertical separation
             if ((trackOne.Altitude - trackTwo.Altitude) < 300)
             {
                 return false;
             }
 
-            //Horizontal separation 
+            //Horizontal separation
+            double xcoord;
+            double ycoord;
+
             xcoord = Math.Pow(trackOne.X - trackTwo.X, 2);
             ycoord = Math.Pow(trackOne.Y - trackTwo.Y, 2);
+
             if (Math.Sqrt(xcoord + ycoord) < 5000)
+            {
                 return true;
+            }
+
             return false;
         }
     }
