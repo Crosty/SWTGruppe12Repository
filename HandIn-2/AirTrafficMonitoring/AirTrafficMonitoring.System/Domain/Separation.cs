@@ -9,6 +9,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class Separation : ISeparation
     {
+        //General creation of tracks to be separated
         public string TagOne { get; set; }
         public string TagTwo { get; set; }
         public DateTime Timestamp { get; set; }
