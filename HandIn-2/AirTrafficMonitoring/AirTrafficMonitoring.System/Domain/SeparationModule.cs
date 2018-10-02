@@ -38,6 +38,7 @@ namespace AirTrafficMonitoring.System.Domain
             TracksSeparated?.Invoke(this, e);
         }
 
+        //Calculates the tracks distance, if this is triggered it alerts the conflict
         private bool CalculateSeparation(Point trackOne, Point trackTwo)
         {
             //Vertical separation
