@@ -14,10 +14,12 @@ namespace AirTrafficMonitoring.System.Domain
 
         public Log(string filePath = null)
         {
+            //Sets the filepath
             _filePath = filePath ?? "Log.txt";
         }
         public void Logging(string logString)
         {
+            //Creates the log in the filepath
             using (StreamWriter w = new StreamWriter(_filePath))
             {
                 w.WriteLine(logString);
