@@ -12,10 +12,9 @@ namespace AirTrafficMonitoring.System.Domain
     {
         private readonly string _filePath;
 
-        public Log(string filePath)
+        public Log(string filePath = null)
         {
-            _filePath = filePath;
-            filePath = "Log.txt";
+            _filePath = filePath ?? "Log.txt";
         }
         public void Logging(string logString)
         {
