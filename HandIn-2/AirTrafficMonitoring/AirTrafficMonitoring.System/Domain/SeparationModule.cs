@@ -38,9 +38,23 @@ namespace AirTrafficMonitoring.System.Domain
             TracksSeparated?.Invoke(this, e);
         }
 
-        private double CalculateSeparation(Point trackOne, Point trackTwo)
+        private bool CalculateSeparation(Point trackOne, Point trackTwo)
         {
-            return 1;
+            double xcoord;
+            double ycoord;
+
+            //Vertical separation
+            if ((trackOne.Altitude - trackTwo.Altitude) < 300)
+            {
+                return false;
+            }
+
+            //Horizontal separation 
+            xcoord = Math.Pow(trackOne.X - trackTwo.X, 2);
+            ycoord = Math.Pow(trackOne.Y - trackTwo.Y, 2);
+            if (Math.Sqrt(xcoord + ycoord) < 5000)
+                return true;
+            return false;
         }
     }
 }
