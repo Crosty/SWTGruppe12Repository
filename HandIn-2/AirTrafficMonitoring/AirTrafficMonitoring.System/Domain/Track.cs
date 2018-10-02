@@ -9,6 +9,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class Track : ITrack
     {
+        //General creation of tracks of the airplanes
         public string Tag { get; set; }
         public Point Position { get; set; }
         public DateTime Timestamp { get; set; }
