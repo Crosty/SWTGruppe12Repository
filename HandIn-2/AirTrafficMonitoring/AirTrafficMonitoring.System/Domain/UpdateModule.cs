@@ -18,6 +18,7 @@ namespace AirTrafficMonitoring.System.Domain
             filterModule.TracksFiltered += UpdateTracks;
         }
 
+        //Updates the filtered tracks and calculates course & velocity
         private void UpdateTracks(object sender, EventTracks e)
         {
             var updatedTracks = new List<ITrack>();
@@ -45,6 +46,7 @@ namespace AirTrafficMonitoring.System.Domain
             TracksUpdated?.Invoke(this, e);
         }
 
+        //Calculates velocity of the planes
         private double CalculateVelocity(Point oldPoint, Point newPoint, DateTime oldTime, DateTime newTime)
         {
             TimeSpan time = newTime - oldTime;
@@ -55,6 +57,7 @@ namespace AirTrafficMonitoring.System.Domain
             return (int)velocity;
         }
 
+        //Calculates course of the planes
         private double CalculateCourse(Point oldPoint, Point newPoint)
         {
             double xcoord = Math.Abs(newPoint.X - oldPoint.X);
