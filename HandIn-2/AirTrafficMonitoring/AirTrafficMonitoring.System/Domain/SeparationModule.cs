@@ -10,5 +10,7 @@ namespace AirTrafficMonitoring.System.Domain
     public class SeparationModule : ISeparationModule
     {
         public event EventHandler<EventTracks> TracksSeparated;
+
+
     }
 }

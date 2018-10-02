@@ -10,9 +10,16 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class Log : ILog
     {
+        private readonly string _filePath;
+
+        public Log(string filePath)
+        {
+            _filePath = filePath;
+            filePath = "Log.txt";
+        }
         public void Logging(string logString)
         {
-            using (StreamWriter w = File.AppendText("Log.txt"))
+            using (StreamWriter w = new StreamWriter(_filePath))
             {
                 w.WriteLine(logString);
             }
