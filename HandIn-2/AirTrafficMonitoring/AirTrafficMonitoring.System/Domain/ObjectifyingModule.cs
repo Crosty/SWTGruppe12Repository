@@ -10,6 +10,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class ObjectifyingModule : IObjectifyingModule
     {
+        //Events occuring from the transponder
         public event EventHandler<EventTracks> TracksObjectified;
 
         public ObjectifyingModule(ITransponderReceiver transponderReceiver)
