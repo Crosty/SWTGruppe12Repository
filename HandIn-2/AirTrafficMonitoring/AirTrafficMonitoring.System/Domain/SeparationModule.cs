@@ -10,13 +10,13 @@ namespace AirTrafficMonitoring.System.Domain
     public class SeparationModule : ISeparationModule
     {
         private ILog _log;
-        private List<ITrack> _oldSeparations;
+        private List<ITrack> _oldSeparationsTrack;
         public event EventHandler<EventTracks> TracksSeparated;
 
         public SeparationModule(IUpdateModule updateModule, ILog log)
         {
             _log = log;
-            _oldSeparations = new List<ITrack>();
+            _oldSeparationsTrack = new List<ITrack>();
             updateModule.TracksUpdated += SeparationTracks;
         }
 
@@ -29,7 +29,7 @@ namespace AirTrafficMonitoring.System.Domain
                 //Do something
             }
 
-            _oldSeparations = updatedSeparationsTracks;
+            _oldSeparationsTrack = updatedSeparationsTracks;
 
         }
 
