@@ -14,6 +14,7 @@ namespace AirTrafficMonitoring.System.Domain
             Console.WriteLine(str);
         }
 
+        //Keeps the console clean - There's no history of events
         public void Clear()
         {
             Console.Clear();
