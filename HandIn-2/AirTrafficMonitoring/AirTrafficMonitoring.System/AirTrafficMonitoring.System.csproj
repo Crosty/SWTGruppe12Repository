@@ -48,6 +48,7 @@
     <Compile Include="Domain\Display.cs" />
     <Compile Include="Domain\FilterModule.cs" />
     <Compile Include="Domain\Point.cs" />
+    <Compile Include="Domain\SeparationModule.cs" />
     <Compile Include="Domain\Track.cs" />
     <Compile Include="Domain\TrackRender.cs" />
     <Compile Include="Domain\UpdateModule.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Interfaces\IFilterModule.cs" />
     <Compile Include="Interfaces\IObjectifyingModule.cs" />
     <Compile Include="Interfaces\IPoint.cs" />
+    <Compile Include="Interfaces\ISeparationModule.cs" />
     <Compile Include="Interfaces\ITrack.cs" />
     <Compile Include="Interfaces\ITrackRender.cs" />
     <Compile Include="Interfaces\IUpdateModule.cs" />
