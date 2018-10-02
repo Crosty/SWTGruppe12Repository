@@ -9,6 +9,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class Point : IPoint
     {
+        //General creation of coordination and altitude
         public int X { get; set; }
         public int Y { get; set; }
         public int Altitude { get; set; }
