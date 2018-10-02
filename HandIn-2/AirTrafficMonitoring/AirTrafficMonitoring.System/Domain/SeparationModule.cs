@@ -22,18 +22,18 @@ namespace AirTrafficMonitoring.System.Domain
 
         private void SeparationTracks(object sender, EventTracks e)
         {
-            var updatedSeparations = new List<ITrack>();
+            var updatedSeparationsTracks = new List<ITrack>();
 
             foreach (var separationTrack in e.Data)
             {
                 //Do something
             }
 
-            _oldSeparations = updatedSeparations;
+            _oldSeparations = updatedSeparationsTracks;
 
         }
 
-        protected virtual void UpdatedSeparationsEvent(EventTracks e)
+        protected virtual void UpdatedSeparationsTracksEvent(EventTracks e)
         {
             TracksSeparated?.Invoke(this, e);
         }
