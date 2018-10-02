@@ -25,16 +25,15 @@ namespace AirTrafficMonitoring.System.Domain
             {
                 //If filtered.tag is on _oldtracks, update course and velocity
                 //If not, add filtered
-                foreach (var oldTracks in _oldTracks)
+                var oldTracks = _oldTracks.FirstOrDefault(t => t.Tag == filtered.Tag);
+
+                if (oldTracks != null)
                 {
-                    if (filtered.Tag == oldTracks.Tag)
-                    {
-                        filtered.Course = CalculateCourse(oldTracks.Position, filtered.Position);
-                        filtered.Velocity = CalculateVelocity(oldTracks.Position, filtered.Position,
-                            oldTracks.Timestamp, filtered.Timestamp);
-                    }
+                    filtered.Course = CalculateCourse(oldTracks.Position, filtered.Position);
+                    filtered.Velocity = CalculateVelocity(oldTracks.Position, filtered.Position,
+                        oldTracks.Timestamp, filtered.Timestamp);
                 }
-                
+
                 updatedTracks.Add(filtered);
             }
             _oldTracks = updatedTracks;
@@ -53,7 +52,7 @@ namespace AirTrafficMonitoring.System.Domain
             var distance = Math.Sqrt(Math.Pow((newPoint.X - oldPoint.X), 2) + Math.Pow((newPoint.Y - oldPoint.Y), 2));
             var velocity = distance / timeDiff;
 
-            return velocity;
+            return (int)velocity;
         }
 
         private double CalculateCourse(Point oldPoint, Point newPoint)
@@ -69,19 +68,19 @@ namespace AirTrafficMonitoring.System.Domain
             }
             else
             {
-                {
-                    double radian = Math.Atan2(ycoord, xcoord);
-                    direction = radian / Math.PI * 180;
 
-                    direction = 90 - direction;
-                    if (direction < 0)
-                    {
-                        direction += 360;
-                    }
+                double radian = Math.Atan2(ycoord, xcoord);
+                direction = radian / Math.PI * 180;
+
+                direction = 90 - direction;
+                if (direction < 0)
+                {
+                    direction += 360;
                 }
+
             }
-            
-            return direction;
+
+            return (int)direction;
         }
     }
 }
