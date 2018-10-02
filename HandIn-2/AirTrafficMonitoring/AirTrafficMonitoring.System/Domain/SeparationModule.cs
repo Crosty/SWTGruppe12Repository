@@ -37,5 +37,10 @@ namespace AirTrafficMonitoring.System.Domain
         {
             TracksSeparated?.Invoke(this, e);
         }
+
+        private double CalculateSeparation(Point trackOne, Point trackTwo)
+        {
+            return 1;
+        }
     }
 }
