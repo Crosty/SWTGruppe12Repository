@@ -15,11 +15,14 @@ namespace AirTrafficMonitoring.System.Domain
 
         public Airspace()
         {
+            //Sets minimum coordination - limits
             SouthWestCorner = new Point(10000, 10000, 500);
 
+            //Sets maximum coordination - limits
             NorthEastCorner = new Point(90000, 90000, 20000);
         }
 
+        //Checks if the plane is within the airspace
         public bool CheckIfWithinAirspace(Point point)
         {
             if (point.X < SouthWestCorner.X || point.Y < SouthWestCorner.Y)
