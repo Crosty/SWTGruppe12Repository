@@ -17,8 +17,10 @@ namespace AirTrafficMonitoring.System.Domain
             updateModule.TracksUpdated += RenderTracks;
         }
 
+        //Renders the tracks of the airplanes
         private void RenderTracks(object sender, EventTracks e)
         {
+            //Clears the console from history of events.
             _display.Clear();
             _display.Write("*TRACKS*");
             foreach (var track in e.Data)
