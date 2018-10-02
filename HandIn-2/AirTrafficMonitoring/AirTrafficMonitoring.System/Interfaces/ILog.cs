@@ -8,5 +8,6 @@ namespace AirTrafficMonitoring.System.Interfaces
 {
     public interface ILog
     {
+        void Logging(string logString);
     }
 }
