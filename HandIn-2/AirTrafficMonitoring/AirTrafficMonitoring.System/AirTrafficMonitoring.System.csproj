@@ -47,6 +47,7 @@
     <Compile Include="Domain\Airspace.cs" />
     <Compile Include="Domain\Display.cs" />
     <Compile Include="Domain\FilterModule.cs" />
+    <Compile Include="Domain\Log.cs" />
     <Compile Include="Domain\Point.cs" />
     <Compile Include="Domain\SeparationModule.cs" />
     <Compile Include="Domain\Track.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Interfaces\IAirspace.cs" />
     <Compile Include="Interfaces\IDisplay.cs" />
     <Compile Include="Interfaces\IFilterModule.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Interfaces\IObjectifyingModule.cs" />
     <Compile Include="Interfaces\IPoint.cs" />
     <Compile Include="Interfaces\ISeparationModule.cs" />
