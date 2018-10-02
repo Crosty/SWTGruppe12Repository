@@ -46,7 +46,7 @@ namespace AirTrafficMonitoring.System.Domain
             TracksUpdated?.Invoke(this, e);
         }
 
-        //Calculates velocity of the planes
+        //Calculates velocity of the tracks
         private double CalculateVelocity(Point oldPoint, Point newPoint, DateTime oldTime, DateTime newTime)
         {
             TimeSpan time = newTime - oldTime;
@@ -57,7 +57,7 @@ namespace AirTrafficMonitoring.System.Domain
             return (int)velocity;
         }
 
-        //Calculates course of the planes
+        //Calculates course of the tracks
         private double CalculateCourse(Point oldPoint, Point newPoint)
         {
             double xcoord = Math.Abs(newPoint.X - oldPoint.X);

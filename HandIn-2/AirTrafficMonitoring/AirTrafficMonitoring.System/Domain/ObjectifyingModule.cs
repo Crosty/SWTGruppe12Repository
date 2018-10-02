@@ -19,7 +19,7 @@ namespace AirTrafficMonitoring.System.Domain
         }
 
         //Receives data from TransponderReceiver
-        //Creates track of planes
+        //Creates tracks
         //Splits the information with ";"
         private void CreateTracks(object sender, RawTransponderDataEventArgs e)
         {

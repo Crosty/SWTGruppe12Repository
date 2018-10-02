@@ -20,7 +20,7 @@ namespace AirTrafficMonitoring.System.Domain
             objectifyingModule.TracksObjectified += FilterTracks;
         }
 
-        //Filter tracks - focuses only on planes within the airspace
+        //Filter tracks - focuses only on tracks within the airspace
         //Ignores irrelevant airplanes
         private void FilterTracks(object sender, EventTracks e)
         {
