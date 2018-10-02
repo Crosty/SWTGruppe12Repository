@@ -26,7 +26,12 @@ namespace AirTrafficMonitoring.System.Domain
 
             foreach (var separationTrack in e.Data)
             {
-                //Do something
+                foreach (var separationTrackTwo in e.Data)
+                {
+                    //If conflict occurs, do calculate, change positions from old to a new
+                    //update it.
+                    
+                }
             }
 
             _oldSeparationsTrack = updatedSeparationsTracks;
@@ -39,7 +44,7 @@ namespace AirTrafficMonitoring.System.Domain
         }
 
         //Calculates the tracks distance, if this is triggered it alerts the conflict
-        private bool CalculateSeparation(Point trackOne, Point trackTwo)
+        private bool CalculateSeparationTracks(Point trackOne, Point trackTwo)
         {
             //Vertical separation
             if ((trackOne.Altitude - trackTwo.Altitude) < 300)
