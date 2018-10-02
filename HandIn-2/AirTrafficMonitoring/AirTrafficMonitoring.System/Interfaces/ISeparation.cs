@@ -8,5 +8,8 @@ namespace AirTrafficMonitoring.System.Interfaces
 {
     public interface ISeparation
     {
+        string TagOne { get; set; }
+        string TagTwo { get; set; }
+        DateTime Timestamp { get; set; }
     }
 }
