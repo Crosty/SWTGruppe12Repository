@@ -25,12 +25,18 @@ namespace AirTrafficMonitoring.System.Domain
             {
                 //If filtered.tag is on _oldtracks, update course and velocity
                 //If not, add filtered
-
-
-
+                foreach (var oldTracks in _oldTracks)
+                {
+                    if (filtered.Tag == oldTracks.Tag)
+                    {
+                        filtered.Course = CalculateCourse(oldTracks.Position, filtered.Position);
+                        filtered.Velocity = CalculateVelocity(oldTracks.Position, filtered.Position,
+                            oldTracks.Timestamp, filtered.Timestamp);
+                    }
+                }
+                
                 updatedTracks.Add(filtered);
             }
-
             _oldTracks = updatedTracks;
             UpdatedTracksEvent(new EventTracks(updatedTracks));
         }
@@ -56,7 +62,7 @@ namespace AirTrafficMonitoring.System.Domain
             double ycoord = Math.Abs(newPoint.Y - oldPoint.Y);
 
             double direction = 0;
-
+            
             if (xcoord == 0 && ycoord == 0)
             {
                 return Double.NaN;
@@ -74,7 +80,7 @@ namespace AirTrafficMonitoring.System.Domain
                     }
                 }
             }
-
+            
             return direction;
         }
     }
