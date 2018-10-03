@@ -9,11 +9,13 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class TrackRender : ITrackRender
     {
-        private IDisplay _display;
+        private readonly IDisplay _display;
+        private ILog _log;
 
-        public TrackRender(IUpdateModule updateModule, IDisplay display)
+        public TrackRender(IUpdateModule updateModule, IDisplay display, ILog log)
         {
             _display = display;
+            _log = log;
             updateModule.TracksUpdated += RenderTracks;
         }
 
