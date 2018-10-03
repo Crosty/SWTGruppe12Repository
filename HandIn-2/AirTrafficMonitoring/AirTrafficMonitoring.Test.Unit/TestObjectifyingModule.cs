@@ -7,6 +7,7 @@ using AirTrafficMonitoring.System.Interfaces;
 using AirTrafficMonitoring.System.Domain;
 using TransponderReceiver;
 using NUnit.Framework;
+using NSubstitute;
 
 namespace AirTrafficMonitoring.Test.Unit
 {
@@ -18,10 +19,24 @@ namespace AirTrafficMonitoring.Test.Unit
 
         private IObjectifyingModule _uut;
 
+        private List<ITrack> _trackList;
+
         [SetUp]
         public void Setup()
         {
-            
+            //Arrange
+            _tr = Substitute.For<ITransponderReceiver>();
+            _uut = new ObjectifyingModule(_tr);
+
+            _uut.TracksObjectified += (sender, args) =>
+            {
+                _trackList = args.Data;
+            };
+        }
+
+        public void CreateTracks_CreateTracksAddToList(string trackList)
+        {
+
         }
     }
 }

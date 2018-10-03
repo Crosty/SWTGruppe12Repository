@@ -30,6 +30,19 @@ namespace AirTrafficMonitoring.System.Domain
                 {
                     //If conflict occurs, do calculate, change positions from old to a new
                     //update it.
+                    if (separationTrack.Tag != separationTrackTwo.Tag)
+                    {
+                        if (CalculateSeparationTracks(separationTrack.Position, separationTrackTwo.Position))
+                        {
+                            var oldSeparationTrack = updatedSeparationsTracks.FirstOrDefault(t =>
+                                t.TagOne == separationTrack.Tag || t.TagTwo == separationTrack.Tag);
+                            if (oldSeparationTrack == null)
+                            {
+                                updatedSeparationsTracks.Add(new Collision(separationTrack.Tag, separationTrackTwo.Tag,
+                                    separationTrack.Timestamp));
+                            }
+                        }
+                    }
                 }
             }
 
@@ -45,7 +58,7 @@ namespace AirTrafficMonitoring.System.Domain
         //Calculates the tracks distance, if this is triggered it alerts the conflict
         private bool CalculateSeparationTracks(Point trackOne, Point trackTwo)
         {
-            //If return true, conflicting occured
+            //If return true, conflict occured
             //If return false, only one or none of the two statements are valid.
             //Vertical separation
             if ((trackOne.Altitude - trackTwo.Altitude) < 300)
