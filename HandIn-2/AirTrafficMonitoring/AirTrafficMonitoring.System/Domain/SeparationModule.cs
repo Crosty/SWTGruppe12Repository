@@ -30,11 +30,6 @@ namespace AirTrafficMonitoring.System.Domain
                 {
                     //If conflict occurs, do calculate, change positions from old to a new
                     //update it.
-                    if (CalculateSeparationTracks(separationTrack.Position, separationTrackTwo.Position))
-                    {
-                        //Change positions
-
-                    }
                 }
             }
 
