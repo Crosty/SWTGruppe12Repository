@@ -46,6 +46,8 @@ namespace AirTrafficMonitoring.System.Domain
         //Calculates the tracks distance, if this is triggered it alerts the conflict
         private bool CalculateSeparationTracks(Point trackOne, Point trackTwo)
         {
+            //If return true, conflicting occured
+            //If return false, only one or none of the two statements are valid.
             //Vertical separation
             if ((trackOne.Altitude - trackTwo.Altitude) < 300)
             {
