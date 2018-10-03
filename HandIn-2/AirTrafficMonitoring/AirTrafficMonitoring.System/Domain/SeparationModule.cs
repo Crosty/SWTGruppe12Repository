@@ -49,21 +49,19 @@ namespace AirTrafficMonitoring.System.Domain
             //Vertical separation
             if ((trackOne.Altitude - trackTwo.Altitude) < 300)
             {
+                //Horizontal separation
+                double xcoord;
+                double ycoord;
+
+                xcoord = Math.Pow(trackOne.X - trackTwo.X, 2);
+                ycoord = Math.Pow(trackOne.Y - trackTwo.Y, 2);
+
+                if (Math.Sqrt(xcoord + ycoord) < 5000)
+                {
+                    return true;
+                }
                 return false;
             }
-
-            //Horizontal separation
-            double xcoord;
-            double ycoord;
-
-            xcoord = Math.Pow(trackOne.X - trackTwo.X, 2);
-            ycoord = Math.Pow(trackOne.Y - trackTwo.Y, 2);
-
-            if (Math.Sqrt(xcoord + ycoord) < 5000)
-            {
-                return true;
-            }
-
             return false;
         }
     }
