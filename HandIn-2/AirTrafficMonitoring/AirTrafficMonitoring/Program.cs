@@ -20,8 +20,8 @@ namespace AirTrafficMonitoring
             IObjectifyingModule objectifyingModule = new ObjectifyingModule(transponderReceiver);
             IFilterModule filterModule = new FilterModule(objectifyingModule, airspace);
             IUpdateModule updateModule = new UpdateModule(filterModule);
-            ITrackRender trackRender = new TrackRender(updateModule, display, log);
-            //ISeparationModule separationModule = new SeparationModule(updateModule, log)
+            ITrackRender trackRender = new TrackRender(updateModule, display);
+            ISeparationModule separationModule = new SeparationModule(updateModule, log);
 
             Console.ReadKey();
         }
