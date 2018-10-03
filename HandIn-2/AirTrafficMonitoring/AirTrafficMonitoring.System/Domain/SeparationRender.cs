@@ -9,8 +9,15 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class SeparationRender
     {
+        private IDisplay _display;
 
         public SeparationRender(IUpdateModule updateModule, IDisplay display)
+        {
+            _display = display;
+            updateModule.TracksUpdated += RenderSeparations;
+        }
+
+        private void RenderSeparations()
         {
 
         }
