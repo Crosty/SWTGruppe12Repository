@@ -21,7 +21,7 @@ namespace AirTrafficMonitoring.Test.Unit
         [SetUp]
         public void Setup()
         {
-
+            
         }
     }
 }
