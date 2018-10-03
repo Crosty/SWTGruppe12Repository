@@ -54,6 +54,7 @@
     <Compile Include="Domain\Track.cs" />
     <Compile Include="Domain\TrackRender.cs" />
     <Compile Include="Domain\UpdateModule.cs" />
+    <Compile Include="EventSeparations.cs" />
     <Compile Include="EventTracks.cs" />
     <Compile Include="Domain\ObjectifyingModule.cs" />
     <Compile Include="Interfaces\IAirspace.cs" />
