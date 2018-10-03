@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AirTrafficMonitoring.System.Interfaces
 {
-    public interface ISeparationModule
+    public interface ICollision
     {
-        event EventHandler<EventSeparations> TracksSeparated;
+        string TagOne { get; set; }
+        string TagTwo { get; set; }
+        DateTime Timestamp { get; set; }
     }
 }

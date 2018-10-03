@@ -9,11 +9,11 @@ namespace AirTrafficMonitoring.System
 {
     public class EventSeparations : EventArgs
     {
-        public List<ISeparation> sepData;
+        public List<ICollision> SepData;
 
-        public EventSeparations(List<ISeparation> sepdata)
+        public EventSeparations(List<ICollision> sepData)
         {
-            sepData = sepdata;
+            SepData = sepData;
         }
     }
 }

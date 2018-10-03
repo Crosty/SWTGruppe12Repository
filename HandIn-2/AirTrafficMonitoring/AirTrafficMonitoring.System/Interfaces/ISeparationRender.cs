@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirTrafficMonitoring.System.Interfaces
 {
-    public interface ISeparation
+    public interface ISeparationRender
     {
-        string TagOne { get; set; }
-        string TagTwo { get; set; }
-        DateTime Timestamp { get; set; }
     }
 }

@@ -10,19 +10,19 @@ namespace AirTrafficMonitoring.System.Domain
     public class SeparationModule : ISeparationModule
     {
         private ILog _log;
-        private List<ITrack> _oldSeparationsTrack;
-        public event EventHandler<EventTracks> TracksSeparated;
+        private List<ICollision> _oldSeparationsTrack;
+        public event EventHandler<EventSeparations> TracksSeparated;
 
         public SeparationModule(IUpdateModule updateModule, ILog log)
         {
             _log = log;
-            _oldSeparationsTrack = new List<ITrack>();
+            _oldSeparationsTrack = new List<ICollision>();
             updateModule.TracksUpdated += SeparationTracks;
         }
 
         private void SeparationTracks(object sender, EventTracks e)
         {
-            var updatedSeparationsTracks = new List<ITrack>();
+            var updatedSeparationsTracks = new List<ICollision>();
 
             foreach (var separationTrack in e.Data)
             {
@@ -30,7 +30,11 @@ namespace AirTrafficMonitoring.System.Domain
                 {
                     //If conflict occurs, do calculate, change positions from old to a new
                     //update it.
-                    
+                    if (CalculateSeparationTracks(separationTrack.Position, separationTrackTwo.Position))
+                    {
+                        //Change positions
+
+                    }
                 }
             }
 
@@ -38,7 +42,7 @@ namespace AirTrafficMonitoring.System.Domain
 
         }
 
-        protected virtual void UpdatedSeparationsTracksEvent(EventTracks e)
+        protected virtual void UpdatedSeparationsTracksEvent(EventSeparations e)
         {
             TracksSeparated?.Invoke(this, e);
         }
