@@ -11,15 +11,15 @@ namespace AirTrafficMonitoring.System.Domain
     {
         private IDisplay _display;
 
-        public SeparationRender(IUpdateModule updateModule, IDisplay display)
+        public SeparationRender(ISeparationModule separationModule, IDisplay display)
         {
             _display = display;
-            updateModule.TracksUpdated += RenderSeparations;
+            separationModule.TracksSeparated += RenderSeparations;
         }
 
-        private void RenderSeparations()
+        private void RenderSeparations(object sender, EventSeparations e)
         {
-
+            _display.Clear();
         }
     }
 }
