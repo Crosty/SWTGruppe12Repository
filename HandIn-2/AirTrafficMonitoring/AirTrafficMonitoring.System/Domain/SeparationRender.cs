@@ -7,7 +7,7 @@ using AirTrafficMonitoring.System.Interfaces;
 
 namespace AirTrafficMonitoring.System.Domain
 {
-    public class SeparationRender
+    public class SeparationRender : ISeparationRender
     {
         private IDisplay _display;
 

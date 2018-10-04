@@ -22,6 +22,7 @@ namespace AirTrafficMonitoring
             IUpdateModule updateModule = new UpdateModule(filterModule);
             ITrackRender trackRender = new TrackRender(updateModule, display);
             ISeparationModule separationModule = new SeparationModule(updateModule, log);
+            ISeparationRender separationRender = new SeparationRender(separationModule, display);
 
             Console.ReadKey();
         }
