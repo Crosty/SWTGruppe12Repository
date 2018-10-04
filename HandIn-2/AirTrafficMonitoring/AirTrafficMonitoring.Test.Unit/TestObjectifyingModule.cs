@@ -40,6 +40,14 @@ namespace AirTrafficMonitoring.Test.Unit
         {
             var data = new List<string> {trackList};
             var args = new RawTransponderDataEventArgs(data);
+
+            _tr.TransponderDataReady += Raise.EventWith(args);
+
+            Assert.That(_trackList[0].Tag, Is.EqualTo(trackList.Split(';')[0]));
+            Assert.That(_trackList[1].Position.X, Is.EqualTo(trackList.Split(';')[1]));
+            Assert.That(_trackList[2].Position.Y, Is.EqualTo(trackList.Split(';')[2]));
+            Assert.That(_trackList[3].Position.Altitude, Is.EqualTo(trackList.Split(';')[3]));
+            //Assert.That(_trackList[4].)
         }
     }
 }
