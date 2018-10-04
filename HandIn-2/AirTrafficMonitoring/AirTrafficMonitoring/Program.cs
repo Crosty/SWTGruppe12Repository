@@ -25,6 +25,7 @@ namespace AirTrafficMonitoring
 
             ISeparationRender separationRender = new SeparationRender(separationModule, display);
             ITrackRender trackRender = new TrackRender(updateModule, display);
+
             Console.ReadKey();
         }
     }
