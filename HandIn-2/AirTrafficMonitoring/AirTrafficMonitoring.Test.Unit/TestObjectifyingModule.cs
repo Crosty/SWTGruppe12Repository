@@ -15,10 +15,11 @@ namespace AirTrafficMonitoring.Test.Unit
     [Author("SWTGruppe12")]
     public class TestObjectifyingModule
     {
+        //Demand
         private ITransponderReceiver _tr;
-
+        //uut
         private IObjectifyingModule _uut;
-
+        //Required
         private List<ITrack> _trackList;
 
         [SetUp]
@@ -26,6 +27,7 @@ namespace AirTrafficMonitoring.Test.Unit
         {
             //Arrange
             _tr = Substitute.For<ITransponderReceiver>();
+
             _uut = new ObjectifyingModule(_tr);
 
             _uut.TracksObjectified += (sender, args) =>
@@ -34,9 +36,10 @@ namespace AirTrafficMonitoring.Test.Unit
             };
         }
 
-        public void CreateTracks_CreateTracksAddToList(string trackList)
+        public void CreateTracks_CreateTracksAddToList_ContainsList(string trackList)
         {
-
+            var data = new List<string> {trackList};
+            var args = new RawTransponderDataEventArgs(data);
         }
     }
 }
