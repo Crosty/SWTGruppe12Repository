@@ -19,8 +19,8 @@ namespace AirTrafficMonitoring.System.Domain
 
         private void RenderSeparations(object sender, EventSeparations e)
         {
-            _display.Clear();
-            _display.Write("*SEPARATIONS");
+            //_display.Clear();
+            _display.Write("*SEPARATIONS*");
             foreach (var collision in e.CollisionsData)
             {
                 var str = "TagOne: " + collision.TagOne + " TagTwo: " + collision.TagTwo + " Time: " +

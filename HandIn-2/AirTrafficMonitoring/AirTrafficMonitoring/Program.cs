@@ -16,14 +16,15 @@ namespace AirTrafficMonitoring
             IDisplay display = new Display();
             IAirspace airspace = new Airspace();
             ILog log = new Log();
+
             ITransponderReceiver transponderReceiver = TransponderReceiverFactory.CreateTransponderDataReceiver();
             IObjectifyingModule objectifyingModule = new ObjectifyingModule(transponderReceiver);
             IFilterModule filterModule = new FilterModule(objectifyingModule, airspace);
             IUpdateModule updateModule = new UpdateModule(filterModule);
-            ITrackRender trackRender = new TrackRender(updateModule, display);
             ISeparationModule separationModule = new SeparationModule(updateModule, log);
-            ISeparationRender separationRender = new SeparationRender(separationModule, display);
 
+            ISeparationRender separationRender = new SeparationRender(separationModule, display);
+            ITrackRender trackRender = new TrackRender(updateModule, display);
             Console.ReadKey();
         }
     }
