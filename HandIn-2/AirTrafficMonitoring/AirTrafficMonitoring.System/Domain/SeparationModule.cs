@@ -46,8 +46,18 @@ namespace AirTrafficMonitoring.System.Domain
                 }
             }
 
-            _oldSeparationsTrack = updatedSeparationsTracks;
+            foreach (var separation in updatedSeparationsTracks)
+            {
+                var oldSeparationsTracks = _oldSeparationsTrack.FirstOrDefault(t =>
+                    t.TagOne == separation.TagOne && t.TagTwo == separation.TagTwo);
+                if (oldSeparationsTracks == null)
+                {
+                    _log.Logging("TagOne: " + separation.TagOne + ";" + " TagTwo: " + separation.TagTwo + ";" + " Time: " + separation.Timestamp);
+                }
+            }
 
+            _oldSeparationsTrack = updatedSeparationsTracks;
+            UpdatedSeparationsTracksEvent(new EventSeparations(updatedSeparationsTracks));
         }
 
         protected virtual void UpdatedSeparationsTracksEvent(EventSeparations e)
