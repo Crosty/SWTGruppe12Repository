@@ -37,6 +37,7 @@ namespace AirTrafficMonitoring.Test.Unit
         }
 
         [TestCase("Tag23;10345;43562;4350;20160410235943156")]
+        [TestCase("Tag24;24503;70594;2103;20180410135959931")]
         public void CreateTracks_CreateTracksAddToList_ContainsList(string trackList)
         {
             var data = new List<string> {trackList};
