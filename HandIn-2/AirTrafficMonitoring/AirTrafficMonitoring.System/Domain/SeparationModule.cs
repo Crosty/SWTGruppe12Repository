@@ -9,7 +9,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class SeparationModule : ISeparationModule
     {
-        private ILog _log;
+        private readonly ILog _log;
         private List<ICollision> _oldSeparationsTrack;
         public event EventHandler<EventSeparations> TracksSeparated;
 
