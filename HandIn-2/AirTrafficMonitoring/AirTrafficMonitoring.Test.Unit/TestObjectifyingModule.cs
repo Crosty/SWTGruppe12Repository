@@ -48,7 +48,7 @@ namespace AirTrafficMonitoring.Test.Unit
             Assert.That(_trackList[0].Position.X, Is.EqualTo(Int32.Parse(trackList.Split(';')[1])));
             Assert.That(_trackList[0].Position.Y, Is.EqualTo(Int32.Parse(trackList.Split(';')[2])));
             Assert.That(_trackList[0].Position.Altitude, Is.EqualTo(Int32.Parse(trackList.Split(';')[3])));
-            Assert.That(_trackList[0].Timestamp, Is.EqualTo(trackList.Split(';')[4]));
+            Assert.That(_trackList[0].Timestamp, Is.EqualTo(DateTime.ParseExact(trackList.Split(';')[4], "yyyyMMddHHmmssfff", null)));
         }
     }
 }
