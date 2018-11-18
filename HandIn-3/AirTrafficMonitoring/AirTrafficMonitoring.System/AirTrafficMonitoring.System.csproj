@@ -54,6 +54,7 @@
     <Compile Include="Domain\SeparationRender.cs" />
     <Compile Include="Domain\Track.cs" />
     <Compile Include="Domain\TrackRender.cs" />
+    <Compile Include="Domain\TracksEnter.cs" />
     <Compile Include="Domain\UpdateModule.cs" />
     <Compile Include="EventSeparations.cs" />
     <Compile Include="EventTracks.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Interfaces\ISeparationRender.cs" />
     <Compile Include="Interfaces\ITrack.cs" />
     <Compile Include="Interfaces\ITrackRender.cs" />
+    <Compile Include="Interfaces\ITracksEnter.cs" />
     <Compile Include="Interfaces\IUpdateModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
