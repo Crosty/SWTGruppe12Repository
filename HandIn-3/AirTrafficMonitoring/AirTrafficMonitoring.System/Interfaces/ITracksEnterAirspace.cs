@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AirTrafficMonitoring.System.Interfaces
 {
-    public interface ITracksEnter
+    public interface ITracksEnterAirspace
     {
-        event EventHandler<EventTracks> TracksEntered;
+        event EventHandler<EventTracks> TracksEnteredAirspace;
 
     }
 }
