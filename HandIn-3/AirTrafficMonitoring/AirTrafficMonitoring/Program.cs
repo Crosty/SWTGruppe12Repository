@@ -13,6 +13,7 @@ namespace AirTrafficMonitoring
     {
         static void Main(string[] args)
         {
+            //Enter the functions here:
             IDisplay display = new Display();
             IAirspace airspace = new Airspace();
             ILog log = new Log();
