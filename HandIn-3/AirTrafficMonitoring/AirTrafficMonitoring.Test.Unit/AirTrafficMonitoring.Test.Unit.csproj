@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFilterModule.cs" />
     <Compile Include="TestObjectifyingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
