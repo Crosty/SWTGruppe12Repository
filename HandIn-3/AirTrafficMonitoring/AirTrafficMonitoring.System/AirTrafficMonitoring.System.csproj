@@ -53,6 +53,8 @@
     <Compile Include="Domain\SeparationModule.cs" />
     <Compile Include="Domain\SeparationRender.cs" />
     <Compile Include="Domain\Track.cs" />
+    <Compile Include="Domain\TrackLeftAirspace.cs" />
+    <Compile Include="Domain\TrackLeftAirspaceRender.cs" />
     <Compile Include="Domain\TrackRender.cs" />
     <Compile Include="Domain\TracksEnterAirspace.cs" />
     <Compile Include="Domain\TracksEnterAirspaceRender.cs" />
@@ -70,10 +72,12 @@
     <Compile Include="Interfaces\ISeparationModule.cs" />
     <Compile Include="Interfaces\ISeparationRender.cs" />
     <Compile Include="Interfaces\ITrack.cs" />
+    <Compile Include="Interfaces\ITrackLeftAirspace.cs" />
     <Compile Include="Interfaces\ITrackRender.cs" />
     <Compile Include="Interfaces\ITracksEnterAirspace.cs" />
     <Compile Include="Interfaces\ITracksEnterAirspaceRender.cs" />
     <Compile Include="Interfaces\IUpdateModule.cs" />
+    <Compile Include="Interfaces\TrackLeftAirspaceRender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

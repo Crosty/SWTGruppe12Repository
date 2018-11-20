@@ -31,3 +31,14 @@ C:\Users\Stanie\Desktop\4. Semester\Noter\I4SWT\Repository\SWTGruppe12Repository
 C:\Users\Stanie\Desktop\4. Semester\Noter\I4SWT\Repository\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.Application.csproj.CopyComplete
 C:\Users\Stanie\Desktop\4. Semester\Noter\I4SWT\Repository\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.exe
 C:\Users\Stanie\Desktop\4. Semester\Noter\I4SWT\Repository\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.pdb
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\bin\Debug\AirTrafficMonitoring.exe.config
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\bin\Debug\AirTrafficMonitoring.exe
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\bin\Debug\AirTrafficMonitoring.pdb
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\bin\Debug\AirTrafficMonitoring.System.dll
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\bin\Debug\TransponderReceiver.dll
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\bin\Debug\AirTrafficMonitoring.System.pdb
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.Application.csprojAssemblyReference.cache
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.Application.csproj.CoreCompileInputs.cache
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.Application.csproj.CopyComplete
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.exe
+C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring\obj\Debug\AirTrafficMonitoring.pdb
