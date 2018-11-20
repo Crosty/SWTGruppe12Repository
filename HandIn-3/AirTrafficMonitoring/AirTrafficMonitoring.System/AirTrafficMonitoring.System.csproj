@@ -55,6 +55,7 @@
     <Compile Include="Domain\Track.cs" />
     <Compile Include="Domain\TrackRender.cs" />
     <Compile Include="Domain\TracksEnterAirspace.cs" />
+    <Compile Include="Domain\TracksEnterAirspaceRender.cs" />
     <Compile Include="Domain\UpdateModule.cs" />
     <Compile Include="EventSeparations.cs" />
     <Compile Include="EventTracks.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Interfaces\ITrack.cs" />
     <Compile Include="Interfaces\ITrackRender.cs" />
     <Compile Include="Interfaces\ITracksEnterAirspace.cs" />
+    <Compile Include="Interfaces\ITracksEnterAirspaceRender.cs" />
     <Compile Include="Interfaces\IUpdateModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

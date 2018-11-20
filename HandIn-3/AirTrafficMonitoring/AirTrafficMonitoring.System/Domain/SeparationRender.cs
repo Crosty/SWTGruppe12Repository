@@ -9,7 +9,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class SeparationRender : ISeparationRender
     {
-        private IDisplay _display;
+        private readonly IDisplay _display;
 
         public SeparationRender(ISeparationModule separationModule, IDisplay display)
         {
