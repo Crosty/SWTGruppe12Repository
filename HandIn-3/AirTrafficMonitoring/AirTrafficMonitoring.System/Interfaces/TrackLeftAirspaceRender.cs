@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirTrafficMonitoring.System.Interfaces
 {
-    public interface ITracksLeftAirspaceRender
+    interface TrackLeftAirspaceRender
     {
     }
 }
