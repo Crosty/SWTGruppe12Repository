@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using AirTrafficMonitoring.System.Interfaces;
 
 namespace AirTrafficMonitoring.System.Domain
@@ -19,11 +21,14 @@ namespace AirTrafficMonitoring.System.Domain
 
         private void RenderEnteredTracks(object sender, EventTracks e)
         {
-            _display.Clear();
-            _display.Write("*Tracks Entered Airspace*");
+            _display.Write("*TRACKS ENTERED AIRSPACE*\n");
             foreach (var track in e.Data)
             {
-                var str = "Tag: " + track.Tag + ", Time: " + track.Timestamp;
+                var timer = new Timer();
+                var str = "Tag: " + track.Tag + ", Time: " + track.Timestamp.ToString("G");
+
+                timer.Enabled = true;
+                timer.Interval = 5000;
                 _display.Write(str);
             }
         }

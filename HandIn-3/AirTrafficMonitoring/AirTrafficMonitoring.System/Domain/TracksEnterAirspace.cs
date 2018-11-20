@@ -26,12 +26,12 @@ namespace AirTrafficMonitoring.System.Domain
             var enteredTracks = new List<ITrack>();
             foreach (var track in e.Data)
             {
-                //Check if within airspace, if within airspace printout "Track entered airspace"
-                //Else, printout "Track left airspace".
+                //Check if within airspace, if within airspace add to list and printout on render
+                //Else nothing.
 
                 if (CheckIfTrackEntersAirspace(track.Timestamp, track.Position))
                 {
-                    enteredTracks.Add(track); 
+                    enteredTracks.Add(track);
                 }   
             }
             // Update the list.
@@ -54,9 +54,9 @@ namespace AirTrafficMonitoring.System.Domain
             if (point.X > southWestCorner.X && point.Y > southWestCorner.Y && point.X < northEastCorner.X &&
                 point.Y < northEastCorner.Y)
             {
-                Console.WriteLine("*Track Entered Airspace*" + " - Tag: " + _currentTracks.FirstOrDefault()?.Tag + ", Time: " + timestamp);
-                timer.Enabled = true;
-                timer.Interval = 5000;
+                //Console.WriteLine("*Track Entered Airspace*" + " - Tag: " + _currentTracks.FirstOrDefault()?.Tag + ", Time: " + timestamp);
+                //timer.Enabled = true;
+                //timer.Interval = 5000;
                 return true;
             }
             return false;
