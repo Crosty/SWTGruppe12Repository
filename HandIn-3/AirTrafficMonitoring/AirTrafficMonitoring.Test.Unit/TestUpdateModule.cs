@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AirTrafficMonitoring.System.Domain;
 using AirTrafficMonitoring.System.Interfaces;
 using NUnit.Framework;
 
@@ -18,6 +19,6 @@ namespace AirTrafficMonitoring.Test.Unit
         //uut
         private IUpdateModule _uut;
         //Required
-
+        private Point _insideAirspacePoint;
     }
 }
