@@ -42,6 +42,7 @@ namespace AirTrafficMonitoring.Test.Unit
             _insideAirspace = new Point(50000, 50000, 10000);
             _outsideAirspace = new Point(500, 500, 5);
 
+            //Assumptions
             _airspace.CheckIfWithinAirspace(_insideAirspace).Returns(true);
             _airspace.CheckIfWithinAirspace(_outsideAirspace).Returns(false);
         }
