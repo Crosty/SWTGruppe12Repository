@@ -13,12 +13,12 @@ namespace AirTrafficMonitoring.Test.Unit
     [Author("SWTGruppe12")]
     public class TestUpdateModule
     {
-        //Demand
-        private IFilterModule _filterModule;
-        private List<ITrack> _tracks;
-        //uut
-        private IUpdateModule _uut;
-        //Required
-        private Point _insideAirspacePoint;
+        ////Demand
+        //private IFilterModule _filterModule;
+        //private List<ITrack> _tracks;
+        ////uut
+        //private IUpdateModule _uut;
+        ////Required
+        //private Point _insideAirspacePoint;
     }
 }
