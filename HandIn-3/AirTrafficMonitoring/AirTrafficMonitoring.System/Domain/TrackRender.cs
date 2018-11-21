@@ -23,7 +23,7 @@ namespace AirTrafficMonitoring.System.Domain
         private void RenderTracks(object sender, EventTracks e)
         {
             //Clears the console from history of events.
-            //_display.Clear();
+            _display.Clear();
             _display.Write("*TRACKS*\n");
             foreach (var track in e.Data)
             {
