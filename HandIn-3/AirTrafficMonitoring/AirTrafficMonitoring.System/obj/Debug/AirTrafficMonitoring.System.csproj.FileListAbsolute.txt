@@ -49,3 +49,11 @@ D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTra
 D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.dll
 D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.pdb
 >>>>>>> 1a5bb8c9fb75c2cb9c9f7b38187c8f1b67ff085f
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\bin\Debug\AirTrafficMonitoring.System.dll
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\bin\Debug\AirTrafficMonitoring.System.pdb
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\bin\Debug\TransponderReceiver.dll
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csproj.CopyComplete
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.dll
+C:\Users\Bruger\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.pdb
