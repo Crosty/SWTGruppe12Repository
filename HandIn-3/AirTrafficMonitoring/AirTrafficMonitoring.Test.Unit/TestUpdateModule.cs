@@ -9,6 +9,19 @@ using NUnit.Framework;
 
 namespace AirTrafficMonitoring.Test.Unit
 {
+    //[TestFixture]
+    //[Author("SWTGruppe12")]
+    //public class TestUpdateModule
+    //{
+    //    //Demand
+    //    private IFilterModule _filterModule;
+    //    private List<ITrack> _tracks;
+    //    //uut
+    //    private IUpdateModule _uut;
+    //    //Required
+    //    private Point _insideAirspacePoint;
+    //}
+=======
     [TestFixture]
     [Author("SWTGruppe12")]
     public class TestUpdateModule
@@ -21,4 +34,5 @@ namespace AirTrafficMonitoring.Test.Unit
         ////Required
         //private Point _insideAirspacePoint;
     }
+>>>>>>> 77ba23b64c1f81226555489e372c07bad22e1b03
 }
