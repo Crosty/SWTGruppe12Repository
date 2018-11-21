@@ -19,7 +19,7 @@ namespace AirTrafficMonitoring.System.Domain
 
         private void RenderSeparations(object sender, EventSeparations e)
         {
-            _display.Clear();
+            //_display.Clear();
             _display.Write("*SEPARATIONS*\n");
             foreach (var collision in e.CollisionsData)
             {
