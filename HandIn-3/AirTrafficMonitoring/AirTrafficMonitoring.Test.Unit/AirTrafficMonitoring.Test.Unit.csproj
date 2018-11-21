@@ -63,6 +63,7 @@
     <Compile Include="TestFilterModule.cs" />
     <Compile Include="TestObjectifyingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestUpdateModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
