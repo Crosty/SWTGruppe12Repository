@@ -9,7 +9,7 @@ namespace AirTrafficMonitoring.System.Domain
 {
     public class SeparationRender : ISeparationRender
     {
-        private IDisplay _display;
+        private readonly IDisplay _display;
 
         public SeparationRender(ISeparationModule separationModule, IDisplay display)
         {
@@ -19,8 +19,8 @@ namespace AirTrafficMonitoring.System.Domain
 
         private void RenderSeparations(object sender, EventSeparations e)
         {
-            //_display.Clear();
-            _display.Write("*SEPARATIONS*");
+            _display.Clear();
+            _display.Write("*SEPARATIONS*\n");
             foreach (var collision in e.CollisionsData)
             {
                 var str = "TagOne: " + collision.TagOne + " TagTwo: " + collision.TagTwo + " Time: " +

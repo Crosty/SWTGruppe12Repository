@@ -23,9 +23,11 @@ namespace AirTrafficMonitoring
             IFilterModule filterModule = new FilterModule(objectifyingModule, airspace);
             IUpdateModule updateModule = new UpdateModule(filterModule);
             ISeparationModule separationModule = new SeparationModule(updateModule, log);
+            ITracksEnterAirspace tracksEnterAirspace = new TracksEnterAirspace(airspace, updateModule);
 
             ISeparationRender separationRender = new SeparationRender(separationModule, display);
             ITrackRender trackRender = new TrackRender(updateModule, display);
+            ITracksEnterAirspaceRender tracksEnterAirspaceRender = new TracksEnterAirspaceRender(tracksEnterAirspace, display);
 
             Console.ReadKey();
         }
