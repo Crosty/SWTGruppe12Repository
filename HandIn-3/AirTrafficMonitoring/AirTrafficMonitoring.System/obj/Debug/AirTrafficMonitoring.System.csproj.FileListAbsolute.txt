@@ -30,3 +30,11 @@ C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTr
 C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csproj.CopyComplete
 C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.dll
 C:\Users\mehme\Desktop\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.pdb
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\bin\Debug\AirTrafficMonitoring.System.dll
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\bin\Debug\AirTrafficMonitoring.System.pdb
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\bin\Debug\TransponderReceiver.dll
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csprojAssemblyReference.cache
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csproj.CoreCompileInputs.cache
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.csproj.CopyComplete
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.dll
+D:\OneDrive - Aarhus universitet\Skole\SWT\SWTGruppe12Repository\HandIn-3\AirTrafficMonitoring\AirTrafficMonitoring.System\obj\Debug\AirTrafficMonitoring.System.pdb
