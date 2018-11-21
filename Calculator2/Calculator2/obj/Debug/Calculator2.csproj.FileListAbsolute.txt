@@ -1,0 +1,6 @@
+C:\Users\Bruger\Desktop\SWT Jenkins\SWTGruppe12Repository\Calculator2\Calculator2\bin\Debug\Calculator2.dll
+C:\Users\Bruger\Desktop\SWT Jenkins\SWTGruppe12Repository\Calculator2\Calculator2\bin\Debug\Calculator2.pdb
+C:\Users\Bruger\Desktop\SWT Jenkins\SWTGruppe12Repository\Calculator2\Calculator2\obj\Debug\Calculator2.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\SWT Jenkins\SWTGruppe12Repository\Calculator2\Calculator2\obj\Debug\Calculator2.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Desktop\SWT Jenkins\SWTGruppe12Repository\Calculator2\Calculator2\obj\Debug\Calculator2.dll
+C:\Users\Bruger\Desktop\SWT Jenkins\SWTGruppe12Repository\Calculator2\Calculator2\obj\Debug\Calculator2.pdb
