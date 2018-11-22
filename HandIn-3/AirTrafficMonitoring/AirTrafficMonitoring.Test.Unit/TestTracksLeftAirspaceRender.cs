@@ -28,10 +28,29 @@ namespace AirTrafficMonitoring.Test.Unit
             _trackLeftAirspace = Substitute.For<ITrackLeftAirspace>();
             _display = Substitute.For<IDisplay>();
 
-            _uut = new TracksEnterAirspaceRender(_trackLeftAirspace, _display);
+            _uut = new TracksLeftAirspaceRender(_trackLeftAirspace, _display);
 
             _trackOne = new Point(10000, 14000, 1100);
             _trackTwo = new Point(45000, 45000, 4500);
+        }
+
+        [Test]
+        public void TrackLeftAirspaceRender_ChecksIfTracksWithinAirspace_ReturnsMessage()
+        {
+            var data = new List<ITrack>();
+            var args = new EventTracks(data);
+
+            var trackOne = new Track("TagOne", _trackOne, DateTime.Now);
+            var trackTwo = new Track("TagTwo", _trackTwo, DateTime.Now);
+
+            data.Add(trackOne);
+            data.Add(trackTwo);
+
+            _trackLeftAirspace.TracksleftAirspace += Raise.EventWith(args);
+
+            _display.Received(1).Write("*TRACKS Left AIRSPACE*\n");
+            _display.Received(1).Write("Tag: " + trackOne.Tag + ", Time: " + DateTime.Now);
+            _display.Received(1).Write("Tag: " + trackTwo.Tag + ", Time: " + DateTime.Now);
         }
     }
 }
