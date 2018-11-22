@@ -47,7 +47,7 @@ namespace AirTrafficMonitoring.Test.Unit
             var trackTwo = new Track("TagTwo", _trackTwo, DateTime.Now);
 
             data.Add(trackOne);
-            data.Add(trackTwo);
+            data.Add(trackTwo); 
 
             _tracksEnterAirspace.TracksEnteredAirspace += Raise.EventWith(args);
 
