@@ -8,46 +8,41 @@ using AirTrafficMonitoring.System.Domain;
 using AirTrafficMonitoring.System.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
-
 namespace AirTrafficMonitoring.Test.Unit
 {
     [TestFixture]
     [Author("SWTGruppe12")]
-    public class TestTrackEnterAirspace
+
+    class TestTrackLeftAirspace
     {
-        //Demand
         private IUpdateModule _updateModule;
         private IAirspace _airspace;
         private List<ITrack> _tracks;
-        //uut
-        private ITracksEnterAirspace _uut;
-        //Required
-        private Point _trackEntersAirspace;
 
+        private ITrackLeftAirspace _uut;
+
+        private Point _trackLeftAirspace;
         [SetUp]
         public void Setup()
         {
-            //Arrange
             _updateModule = Substitute.For<IUpdateModule>();
             _airspace = Substitute.For<IAirspace>();
 
             _uut = new TrackLeftAirspace(_airspace, _updateModule);
-            _uut.TracksEnteredAirspace += (sender, args) =>
+            _uut.TracksleftAirspace += (sender, args) =>
             {
                 _tracks = args.Data;
             };
 
-            //Border is (10000, 10000, 500) to (90000, 90000, 20000).
-            _trackEntersAirspace = new Point(50000, 50000, 10000);
+            _trackLeftAirspace = new Point(70000, 70000, 70000);
         }
-
         [Test]
-        public void TracksEnterAirspace_ChecksWhenTrackEntersAirspace()
+        public void CheckIfTrackleftAirspace()
         {
             var data = new List<ITrack>();
             var args = new EventTracks(data);
 
-            var trackInsideAirspace = new Track("TagOne", _trackEntersAirspace, DateTime.Now);
+            var trackInsideAirspace = new Track("TagOne", _trackLeftAirspace, DateTime.Now);
 
             data.Add(trackInsideAirspace);
 
