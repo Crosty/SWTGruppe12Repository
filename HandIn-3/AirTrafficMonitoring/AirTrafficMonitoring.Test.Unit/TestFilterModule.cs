@@ -33,7 +33,7 @@ namespace AirTrafficMonitoring.Test.Unit
             _airspace = Substitute.For<IAirspace>();
 
             _uut = new FilterModule(_objectifyingModule, _airspace);
-            _uut.TracksFiltered += (o, args) =>
+            _uut.TracksFiltered += (sender, args) =>
             {
                 _tracks = args.Data;
             };
