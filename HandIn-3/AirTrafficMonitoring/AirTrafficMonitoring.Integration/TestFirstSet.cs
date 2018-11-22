@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AirTrafficMonitoring.System.Interfaces;
+using NSubstitute;
 using NUnit.Framework;
 using TransponderReceiver;
 
@@ -29,7 +30,7 @@ namespace AirTrafficMonitoring.Integration
         public void SetUp()
         {
             //Arrange
-
+            _tr = Substitute.For<ITransponderReceiver>();
         }
     }
 }
