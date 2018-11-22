@@ -14,7 +14,7 @@ namespace AirTrafficMonitoring.Integration
     [TestFixture]
     [Author("SWTGruppe12")]
     //FirstSet is the first step of our system.
-    //This includes a step from ObjectifyingModule to FilterModule.
+    //This includes a step from ObjectifyingModule -> FilterModule.
     //(Also TransponderReceiver, but not necessarily mentioned).
     public class TestFirstSet
     {
