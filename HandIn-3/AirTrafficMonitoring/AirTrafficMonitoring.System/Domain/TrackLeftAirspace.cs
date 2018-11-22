@@ -13,7 +13,7 @@ namespace AirTrafficMonitoring.System.Domain
     {
         private IAirspace _airspace;
         private List<ITrack> _currentTracks;
-        public event EventHandler<EventTracks> TracksleftedAirspace;
+        public event EventHandler<EventTracks> TracksleftAirspace;
 
         public TrackLeftAirspace(IAirspace airspace, IUpdateModule updateModule)
         {
@@ -42,7 +42,7 @@ namespace AirTrafficMonitoring.System.Domain
 
         protected virtual void TracksleftAirspaceEvent(EventTracks e)
         {
-            TracksleftedAirspace?.Invoke(this, e);
+            TracksleftAirspace?.Invoke(this, e);
         }
 
         //Checks if a track left airspace
