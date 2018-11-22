@@ -13,7 +13,7 @@ namespace AirTrafficMonitoring.Test.Unit
     [TestFixture]
     [Author("SWTGruppe12")]
 
-    class TestTrackLeftAirspace
+    public class TestTrackLeftAirspace
     {
         private IUpdateModule _updateModule;
         private IAirspace _airspace;
@@ -34,7 +34,7 @@ namespace AirTrafficMonitoring.Test.Unit
                 _tracks = args.Data;
             };
 
-            _trackLeftAirspace = new Point(70000, 70000, 70000);
+            _trackLeftAirspace = new Point(1, 1, 1);
         }
         [Test]
         public void CheckIfTrackleftAirspace()
@@ -42,13 +42,13 @@ namespace AirTrafficMonitoring.Test.Unit
             var data = new List<ITrack>();
             var args = new EventTracks(data);
 
-            var trackInsideAirspace = new Track("TagOne", _trackLeftAirspace, DateTime.Now);
+            var trackOutsideAirspace = new Track("TagOne", _trackLeftAirspace, DateTime.Now);
 
-            data.Add(trackInsideAirspace);
+            data.Add(trackOutsideAirspace);
 
             _updateModule.TracksUpdated += Raise.EventWith(args);
 
-            Assert.That(_tracks.Contains(trackInsideAirspace));
+            Assert.That(_tracks.Contains(trackOutsideAirspace), Is.EqualTo(false));
         }
     }
 }

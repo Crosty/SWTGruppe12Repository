@@ -31,7 +31,7 @@ namespace AirTrafficMonitoring.Test.Unit
             _updateModule = Substitute.For<IUpdateModule>();
             _airspace = Substitute.For<IAirspace>();
 
-            _uut = new TrackLeftAirspace(_airspace, _updateModule);
+            _uut = new TracksEnterAirspace(_airspace, _updateModule);
             _uut.TracksEnteredAirspace += (sender, args) =>
             {
                 _tracks = args.Data;

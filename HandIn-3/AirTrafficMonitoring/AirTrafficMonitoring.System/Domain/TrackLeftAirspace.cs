@@ -9,7 +9,7 @@ using AirTrafficMonitoring.System.Interfaces;
 
 namespace AirTrafficMonitoring.System.Domain
 {
-    class TrackLeftAirspace: ITrackLeftAirspace
+    public class TrackLeftAirspace: ITrackLeftAirspace
     {
         private IAirspace _airspace;
         private List<ITrack> _currentTracks;

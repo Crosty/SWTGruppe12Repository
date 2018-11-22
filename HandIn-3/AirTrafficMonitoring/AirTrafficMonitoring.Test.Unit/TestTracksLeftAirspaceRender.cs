@@ -30,8 +30,8 @@ namespace AirTrafficMonitoring.Test.Unit
 
             _uut = new TracksLeftAirspaceRender(_trackLeftAirspace, _display);
 
-            _trackOne = new Point(10000, 14000, 1100);
-            _trackTwo = new Point(45000, 45000, 4500);
+            _trackOne = new Point(1, 1, 1);
+            _trackTwo = new Point(300, 300, 5);
         }
 
         [Test]
@@ -48,7 +48,7 @@ namespace AirTrafficMonitoring.Test.Unit
 
             _trackLeftAirspace.TracksleftAirspace += Raise.EventWith(args);
 
-            _display.Received(1).Write("*TRACKS Left AIRSPACE*\n");
+            _display.Received(1).Write("*TRACKS LEFT AIRSPACE*\n");
             _display.Received(1).Write("Tag: " + trackOne.Tag + ", Time: " + DateTime.Now);
             _display.Received(1).Write("Tag: " + trackTwo.Tag + ", Time: " + DateTime.Now);
         }

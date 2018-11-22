@@ -21,7 +21,7 @@ namespace AirTrafficMonitoring.System.Domain
 
         private void RenderLeftTracks(object sender, EventTracks e)
         {
-            _display.Write("*TRACKS LEFT AIRSPACE*/n");
+            _display.Write("*TRACKS LEFT AIRSPACE*\n");
             foreach (var track in e.Data)
             {
                 var timer = new Timer();
