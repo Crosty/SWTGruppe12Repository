@@ -22,6 +22,33 @@ namespace AirTrafficMonitoring.Test.Unit
         private ITrackLeftAirspace _uut;
 
         private Point _trackLeftAirspace;
+        [SetUp]
+        public void Setup()
+        {
+            _updateModule = Substitute.For<IUpdateModule>();
+            _airspace = Substitute.For<IAirspace>();
 
+            _uut = new TrackLeftAirspace(_airspace, _updateModule);
+            _uut.TracksleftAirspace += (sender, args) =>
+            {
+                _tracks = args.Data;
+            };
+
+            _trackLeftAirspace = new Point(70000, 70000, 70000);
+        }
+        [Test]
+        public void TracksEnterAirspace_ChecksWhenTrackEntersAirspace()
+        {
+            var data = new List<ITrack>();
+            var args = new EventTracks(data);
+
+            var trackInsideAirspace = new Track("TagOne", _trackLeftAirspace, DateTime.Now);
+
+            data.Add(trackInsideAirspace);
+
+            _updateModule.TracksUpdated += Raise.EventWith(args);
+
+            Assert.That(_tracks.Contains(trackInsideAirspace));
+        }
     }
 }
