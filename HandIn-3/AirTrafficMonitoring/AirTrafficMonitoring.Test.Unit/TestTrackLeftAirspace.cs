@@ -37,7 +37,7 @@ namespace AirTrafficMonitoring.Test.Unit
             _trackLeftAirspace = new Point(70000, 70000, 70000);
         }
         [Test]
-        public void TracksEnterAirspace_ChecksWhenTrackEntersAirspace()
+        public void CheckIfTrackleftAirspace()
         {
             var data = new List<ITrack>();
             var args = new EventTracks(data);

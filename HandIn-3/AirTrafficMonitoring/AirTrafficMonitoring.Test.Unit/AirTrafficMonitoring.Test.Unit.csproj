@@ -69,6 +69,7 @@
     <Compile Include="TestTrackEnterAirspaceRender.cs" />
     <Compile Include="TestTrackLeftAirspace.cs" />
     <Compile Include="TestTrackRender.cs" />
+    <Compile Include="TestTracksLeftAirspaceRender.cs" />
     <Compile Include="TestUpdateModule.cs" />
   </ItemGroup>
   <ItemGroup>
