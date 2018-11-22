@@ -22,5 +22,16 @@ namespace AirTrafficMonitoring.Test.Unit
         //Required
         private Point _trackOne;
         private Point _trackTwo;
+        [SetUp]
+        public void Setup()
+        {
+            _trackLeftAirspace = Substitute.For<ITrackLeftAirspace>();
+            _display = Substitute.For<IDisplay>();
+
+            _uut = new TracksEnterAirspaceRender(_trackLeftAirspace, _display);
+
+            _trackOne = new Point(10000, 14000, 1100);
+            _trackTwo = new Point(45000, 45000, 4500);
+        }
     }
 }
