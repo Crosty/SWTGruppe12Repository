@@ -8,7 +8,7 @@ namespace AirTrafficMonitoring.System.Interfaces
 {
     public interface ITrackLeftAirspace
     {
-        event EventHandler<EventTracks> TracksleftAirspace;
+        event EventHandler<EventTracks> TracksleftedAirspace;
 
     }
 }
