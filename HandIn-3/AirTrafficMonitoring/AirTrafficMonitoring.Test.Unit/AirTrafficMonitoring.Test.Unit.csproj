@@ -65,6 +65,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestSeparationModule.cs" />
     <Compile Include="TestSeparationRender.cs" />
+    <Compile Include="TestTrackRender.cs" />
     <Compile Include="TestUpdateModule.cs" />
   </ItemGroup>
   <ItemGroup>
