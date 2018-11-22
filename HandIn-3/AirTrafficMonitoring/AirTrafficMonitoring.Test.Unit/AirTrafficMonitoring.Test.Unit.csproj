@@ -66,6 +66,7 @@
     <Compile Include="TestSeparationModule.cs" />
     <Compile Include="TestSeparationRender.cs" />
     <Compile Include="TestTrackRender.cs" />
+    <Compile Include="TestTracksEnterAirspace.cs" />
     <Compile Include="TestUpdateModule.cs" />
   </ItemGroup>
   <ItemGroup>
