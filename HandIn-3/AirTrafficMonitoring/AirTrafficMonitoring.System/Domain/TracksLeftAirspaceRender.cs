@@ -12,10 +12,10 @@ namespace AirTrafficMonitoring.System.Domain
     {
         private readonly IDisplay _display;
         
-        public TracksLeftAirspaceRender(ITrackLeftAirspace TracksleftAirspace, IDisplay display)
+        public TracksLeftAirspaceRender(ITrackLeftAirspace tracksleftAirspace, IDisplay display)
         {
             _display = display;
-            TracksleftAirspace.TracksleftAirspace += RenderLeftTracks;
+            tracksleftAirspace.TracksleftAirspace += RenderLeftTracks;
 
         }
 
