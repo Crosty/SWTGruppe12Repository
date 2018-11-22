@@ -19,7 +19,8 @@ namespace AirTrafficMonitoring.Integration
     public class TestFirstSet
     {
         //Demand
-        private ITransponderReceiver _tr;
+        //Faking TransponderReceiver
+        private ITransponderReceiver _fakeTR;
         //iut
         private IFilterModule _iut;
         //Required
@@ -31,9 +32,9 @@ namespace AirTrafficMonitoring.Integration
         public void SetUp()
         {
             //Arrange
-            _tr = Substitute.For<ITransponderReceiver>();
+            _fakeTR = Substitute.For<ITransponderReceiver>();
 
-            _objectifyingModule = new ObjectifyingModule(_tr);
+            _objectifyingModule = new ObjectifyingModule(_fakeTR);
             _airspace = new Airspace(); 
 
             _iut = new FilterModule(_objectifyingModule, _airspace);
@@ -56,7 +57,7 @@ namespace AirTrafficMonitoring.Integration
             data.Add(track1);
             data.Add(track2);
 
-            _tr.TransponderDataReady += Raise.EventWith(args);
+            _fakeTR.TransponderDataReady += Raise.EventWith(args);
 
             Assert.That(_filteredTrackList.Count == 2);
             Assert.That(_filteredTrackList[0].Tag, Is.EqualTo(trackOne.Split(';')[0]));
