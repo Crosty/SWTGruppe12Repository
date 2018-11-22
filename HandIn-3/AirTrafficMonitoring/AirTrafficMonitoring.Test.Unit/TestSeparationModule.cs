@@ -71,15 +71,15 @@ namespace AirTrafficMonitoring.Test.Unit
             var data = new List<ITrack>();
             var args = new EventTracks(data);
 
-            var trackOneLog = new Track("TagOne", _trackOne, new DateTime(1997, 10, 10, 10, 10, 10));
-            var trackTwoLog = new Track("TagTwo", _trackTwo, new DateTime(1997, 10, 10, 10, 10, 10));
+            var trackOneLog = new Track("TagOne", _trackOne, DateTime.Now);
+            var trackTwoLog = new Track("TagTwo", _trackTwo, DateTime.Now);
 
             data.Add(trackOneLog);
             data.Add(trackTwoLog);
 
             _updateModule.TracksUpdated += Raise.EventWith(args);
 
-            _log.Received().Logging("TagOne: TagOne; TagTwo: TagTwo; " + "Time: " + new DateTime(1997, 10, 10, 10, 10, 10));
+            _log.Received().Logging("TagOne: TagOne; TagTwo: TagTwo; " + "Time: " + DateTime.Now);
         }
     }
 }
