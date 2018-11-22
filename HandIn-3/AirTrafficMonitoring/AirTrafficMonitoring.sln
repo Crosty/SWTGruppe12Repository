@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTrafficMonitoring.System
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTrafficMonitoring.Test.Unit", "AirTrafficMonitoring.Test.Unit\AirTrafficMonitoring.Test.Unit.csproj", "{9E131AF4-8953-4BC0-A4F3-16B52743357F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTrafficMonitoring.Integration", "AirTrafficMonitoring.Integration\AirTrafficMonitoring.Integration.csproj", "{D72BB2A7-E015-4CD1-9305-A412AFF05724}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9E131AF4-8953-4BC0-A4F3-16B52743357F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E131AF4-8953-4BC0-A4F3-16B52743357F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E131AF4-8953-4BC0-A4F3-16B52743357F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72BB2A7-E015-4CD1-9305-A412AFF05724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72BB2A7-E015-4CD1-9305-A412AFF05724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72BB2A7-E015-4CD1-9305-A412AFF05724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72BB2A7-E015-4CD1-9305-A412AFF05724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

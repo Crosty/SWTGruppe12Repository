@@ -27,6 +27,7 @@ namespace AirTrafficMonitoring.Test.Unit
         [SetUp]
         public void Setup()
         {
+            //Arrange
             _updateModule = Substitute.For<IUpdateModule>();
             _airspace = Substitute.For<IAirspace>();
 

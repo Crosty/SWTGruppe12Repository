@@ -28,6 +28,7 @@ namespace AirTrafficMonitoring.Test.Unit
         [SetUp]
         public void Setup()
         {
+            //Arrange
             _tracksEnterAirspace = Substitute.For<ITracksEnterAirspace>();
             _display = Substitute.For<IDisplay>();
 
